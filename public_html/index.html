@@ -1,17 +1,62 @@
+<!DOCTYPE html>
+
 <!--
 Author: Justin Nichols
 Class: CSC337 (Web Development)
-Purpose:
+Purpose: This file creates a form to sign up for RuneScape.
 -->
 
 <html lang=en-US>
     <head>
-        <title></title>    
+        <title>Sign-up Form</title>    
         <meta charset="UTF-8">
         <meta name="author" content="Justin Nichols">
-        <link rel=stylesheet href="css/.css">
+        <link rel=stylesheet href="css/style.css">
     </head>
     <body>
-
+        <header>
+            <h1>RuneScape</h1>
+        </header>
+        <div id="content">
+            <form action="https://benjdd.com/sp" method="POST">
+                <h2>Start Your Adventure</h2>
+                <img src="img/dragon.jpg" alt="A Band of Adventurers Fighting a Dragon.">
+                <div>
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first name"
+                        pattern="^[A-Z][a-zA-Z]+$">
+                </div>
+                <div>
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last name"
+                        pattern="^[A-Z][a-zA-Z]+$">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password"
+                        pattern="^.{8,}$">
+                </div>
+                <div>
+                    <label>Email me events, offers, and updates?</label>
+                    <input type="radio" id="no" class="radio" name="news-letter-sign-up" 
+                        value="no">
+                    <label for="no" class="radio">No</label>
+                    <input type="radio" id="yes" class="radio" name="news-letter-sign-up" 
+                        value="yes">
+                    <label for="yes"i class="radio">Yes</label>
+                </div>
+                <div>
+                    <label for="satisfaction">Please rate your satisfaction with 
+                        this game: </label>
+                    <input type="range" id="satisfaction" name="satisfaction" 
+                        min="0" max="10" step="1">
+                </div>
+                <input type="submit" value="Begin">
+            </form>
+        </div>
     </body>
 </html>
